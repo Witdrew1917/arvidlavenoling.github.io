@@ -1,208 +1,38 @@
-locale                   : "en-US"
-title                    : "Arvid Laveno Ling"
-title_separator          : "-"
-name                     : &name "Arvid Laveno Ling"
-description              : &description "Industrial PhD Student at Zenseact & Chalmers"
-url                      : https://arvidlavenoling.github.io
-baseurl                  : ""
-repository               : "witdrew1917/arvidlavenoling.github.io"
+title: Arvid Laveno Ling
+description: Industrial PhD at Zenseact
+url: "https://arvidlavenoling.github.io"
+baseurl: ""
 
-remote_theme             : "mmistakes/minimal-mistakes@4.26.2"
-minimal_mistakes_skin    : "default"
-
-# Site Author
 author:
-  name             : "Arvid Laveno Ling"
-  avatar           : "/images/pp.jpg"
-  bio              : "Industrial PhD Student"
-  location         : "Gothenburg, Sweden"
-  email            : "arvid.laveno.ling@zenseact.com"
-  links:
-    - label: "GitHub"
-      icon: "fab fa-fw fa-github"
-      url: "https://github.com/witdrew1917"
-    - label: "Google Scholar"
-      icon: "fas fa-fw fa-graduation-cap"
-      url: "https://scholar.google.com/citations?user=BhAezqYAAAAJ&hl=en&authuser=1"
-    - label: "ORCID"
-      icon: "fab fa-fw fa-orcid"
-      url: "https://orcid.org/0009-0006-5221-0490"
-    - label: "Goodreads"
-      icon: "fab fa-fw fa-book"
-      url: "https://www.goodreads.com/user/show/141228001-arvid-laveno-ling"
+  name: Arvid Laveno Ling
+  title: Industrial PhD
+  affiliation: Zenseact
+  affiliation_url: https://www.zenseact.com
+  email: ""                  # e.g. arvid@example.com
+  google_scholar: ""         # Google Scholar user ID (from your profile URL)
+  linkedin: ""               # LinkedIn username
+  github: arvidlavenoling    # GitHub username
+  goodreads: ""              # Goodreads user URL path (e.g. user/show/12345-name)
+  profile_image: /assets/images/profile.svg  # Replace with your photo, e.g. /assets/images/profile.jpg
 
-# Site Settings
-breadcrumbs              : false
-words_per_minute         : 160
-future                   : true
-comments:
-  provider               : false
+nav_links:
+  - title: Home
+    url: /
+  - title: Teaching
+    url: /teaching/
 
-atom_feed:
-  hide                   : false
-
-# SEO Related
-google_site_verification :
-bing_site_verification   :
-
-# Social Sharing
-twitter:
-  username               :
-facebook:
-  username               :
-og_image                 :
-social:
-  type                   : Person
-  name                   : *name
-  links:
-    - "https://github.com/witdrew1917"
-    - "https://scholar.google.com/citations?user=BhAezqYAAAAJ&hl=en&authuser=1"
-    - "https://orcid.org/0009-0006-5221-0490"
-
-# Analytics
-analytics:
-  provider               : false
-
-# Reading Files
-include:
-  - .htaccess
-  - _pages
-exclude:
-  - "*.sublime-project"
-  - "*.sublime-workspace"
-  - .asset-cache
-  - .bundle
-  - .github
-  - .jekyll-assets-cache
-  - .sass-cache
-  - Capfile
-  - config
-  - Dockerfile
-  - Gemfile
-  - Gruntfile.js
-  - gulpfile.js
-  - LICENSE
-  - local
-  - log
-  - node_modules
-  - package.json*
-  - Rakefile
-  - README
-  - tmp
-  - vendor
-keep_files:
-  - .git
-encoding: "utf-8"
-markdown_ext: "markdown,mkdown,mkdn,mkd,md"
-
-# Conversion
 markdown: kramdown
 highlighter: rouge
-lsi: false
-excerpt_separator: "\n\n"
-incremental: false
+permalink: pretty
 
-# Markdown Processing
-kramdown:
-  input: GFM
-  hard_wrap: false
-  auto_ids: true
-  footnote_nr: 1
-  entity_output: as_char
-  toc_levels: 1..6
-  smart_quotes: lsquo,rsquo,ldquo,rdquo
-  enable_coderay: false
-
-# Collections
-collections:
-  teaching:
-    output: true
-    permalink: /:collection/:path/
-  publications:
-    output: true
-    permalink: /:collection/:path/
-  portfolio:
-    output: true
-    permalink: /:collection/:path/
-  talks:
-    output: true
-    permalink: /:collection/:path/
-
-# Defaults
-defaults:
-  - scope:
-      path: ""
-      type: posts
-    values:
-      layout: single
-      author_profile: true
-      read_time: true
-      comments: false
-      share: true
-      related: true
-  - scope:
-      path: ""
-      type: pages
-    values:
-      layout: single
-      author_profile: true
-  - scope:
-      path: ""
-      type: teaching
-    values:
-      layout: single
-      author_profile: true
-      share: true
-  - scope:
-      path: ""
-      type: publications
-    values:
-      layout: single
-      author_profile: true
-      share: true
-  - scope:
-      path: ""
-      type: portfolio
-    values:
-      layout: single
-      author_profile: true
-      share: true
-  - scope:
-      path: ""
-      type: talks
-    values:
-      layout: single
-      author_profile: true
-      share: true
-
-# Sass/SCSS
-sass:
-  sass_dir: _sass
-  style: compressed
-
-# Outputting
-permalink: /:categories/:title/
-timezone: Etc/UTC
-
-# Plugins
 plugins:
-  - jekyll-feed
-  - jekyll-paginate
+  - jekyll-seo-tag
   - jekyll-sitemap
-  - jekyll-redirect-from
-  - jekyll-remote-theme
-  - jekyll-include-cache
 
-# Archives
-category_archive:
-  type: liquid
-  path: /categories/
-tag_archive:
-  type: liquid
-  path: /tags/
-
-# HTML Compression
-compress_html:
-  clippings: all
-  ignore:
-    envs: development
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - .github/
+  - .devcontainer/
+  - vendor/

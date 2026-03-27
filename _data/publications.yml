@@ -1,0 +1,27 @@
+# Publications — add new entries at the TOP (newest first)
+#
+# Required: title, authors, year
+# Optional: venue, venue_short, paper_url, pdf_url, code_url,
+#           project_url, poster_url, slides_url, note
+#
+# - title: "Your Paper Title"
+#   authors: "Laveno Ling, A., Coauthor, B., & Third, C."
+#   year: 2025
+#   venue: "Full Conference or Journal Name"
+#   venue_short: "CVPR 2025"          # shown in list; full name shown on hover
+#   paper_url: "https://arxiv.org/abs/xxxx.xxxxx"
+#   pdf_url: ""                         # direct PDF if different from paper_url
+#   code_url: "https://github.com/..."
+#   project_url: ""
+#   poster_url: ""
+#   slides_url: ""
+#   note: "Best Paper Award"            # optional highlight badge
+
+- title: "Example: Deep Learning for Autonomous Driving Perception"
+  authors: "Laveno Ling, A., Supervisor, J., & Coauthor, M."
+  year: 2024
+  venue: "Proceedings of the IEEE/CVF Conference on Computer Vision and Pattern Recognition"
+  venue_short: "CVPR 2024"
+  paper_url: ""
+  code_url: ""
+  note: ""

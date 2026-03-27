@@ -1,14 +1,9 @@
-source 'https://rubygems.org'
+source "https://rubygems.org"
 
-gem 'jekyll', '~> 4.3'
-gem 'jekyll-remote-theme'
+gem "jekyll", "~> 4.3"
+gem "webrick", "~> 1.8"
 
 group :jekyll_plugins do
-  gem 'jekyll-feed'
-  gem 'jekyll-sitemap'
-  gem 'jekyll-redirect-from'
-  gem 'jekyll-paginate'
-  gem 'jekyll-include-cache'
+  gem "jekyll-seo-tag", "~> 2.8"
+  gem "jekyll-sitemap", "~> 1.4"
 end
-
-gem 'webrick', '~> 1.8'

@@ -1,0 +1,51 @@
+---
+layout: default
+---
+<main class="home-content">
+  <aside class="profile-sidebar">
+    <div class="profile-photo-wrap">
+      <img
+        src="{{ site.author.profile_image | relative_url }}"
+        alt="{{ site.author.name }}"
+        class="profile-photo"
+      >
+    </div>
+    <h1 class="profile-name">{{ site.author.name }}</h1>
+    <p class="profile-title">{{ site.author.title }}</p>
+    <p class="profile-affiliation">
+      {% if site.author.affiliation_url and site.author.affiliation_url != "" %}
+        <a href="{{ site.author.affiliation_url }}" target="_blank" rel="noopener">{{ site.author.affiliation }}</a>
+      {% else %}
+        {{ site.author.affiliation }}
+      {% endif %}
+    </p>
+    <ul class="contact-links">
+      {% if site.author.email and site.author.email != "" %}
+      <li><a href="mailto:{{ site.author.email }}">Email</a></li>
+      {% endif %}
+      {% if site.author.google_scholar and site.author.google_scholar != "" %}
+      <li><a href="https://scholar.google.com/citations?user={{ site.author.google_scholar }}" target="_blank" rel="noopener">Google Scholar</a></li>
+      {% endif %}
+      {% if site.author.linkedin and site.author.linkedin != "" %}
+      <li><a href="https://www.linkedin.com/in/{{ site.author.linkedin }}" target="_blank" rel="noopener">LinkedIn</a></li>
+      {% endif %}
+      {% if site.author.github and site.author.github != "" %}
+      <li><a href="https://github.com/{{ site.author.github }}" target="_blank" rel="noopener">GitHub</a></li>
+      {% endif %}
+      {% if site.author.goodreads and site.author.goodreads != "" %}
+      <li><a href="https://www.goodreads.com/{{ site.author.goodreads }}" target="_blank" rel="noopener">Goodreads</a></li>
+      {% endif %}
+    </ul>
+  </aside>
+
+  <div class="home-main">
+    <div class="bio-section">
+      {{ content }}
+    </div>
+
+    <section class="publications-section">
+      <h2>Publications</h2>
+      {% include publications.html %}
+    </section>
+  </div>
+</main>

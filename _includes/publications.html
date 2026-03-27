@@ -1,0 +1,50 @@
+{% if site.data.publications.size > 0 %}
+<ul class="publications-list">
+  {% for pub in site.data.publications %}
+  <li class="publication">
+    <div class="pub-year">{{ pub.year }}</div>
+    <div class="pub-details">
+      <h3 class="pub-title">
+        {% if pub.paper_url and pub.paper_url != "" %}
+          <a href="{{ pub.paper_url }}" target="_blank" rel="noopener">{{ pub.title }}</a>
+        {% else %}
+          {{ pub.title }}
+        {% endif %}
+      </h3>
+      <p class="pub-authors">{{ pub.authors }}</p>
+      {% if pub.venue and pub.venue != "" %}
+      <p class="pub-venue">
+        {% if pub.venue_short and pub.venue_short != "" %}
+          <span title="{{ pub.venue }}">{{ pub.venue_short }}</span>
+        {% else %}
+          {{ pub.venue }}
+        {% endif %}
+      </p>
+      {% endif %}
+      {% if pub.note and pub.note != "" %}
+        <span class="pub-note">{{ pub.note }}</span>
+      {% endif %}
+      {% assign _has_links = false %}
+      {% if pub.paper_url and pub.paper_url != "" %}{% assign _has_links = true %}{% endif %}
+      {% if pub.pdf_url and pub.pdf_url != "" %}{% assign _has_links = true %}{% endif %}
+      {% if pub.code_url and pub.code_url != "" %}{% assign _has_links = true %}{% endif %}
+      {% if pub.project_url and pub.project_url != "" %}{% assign _has_links = true %}{% endif %}
+      {% if pub.poster_url and pub.poster_url != "" %}{% assign _has_links = true %}{% endif %}
+      {% if pub.slides_url and pub.slides_url != "" %}{% assign _has_links = true %}{% endif %}
+      {% if _has_links %}
+      <div class="pub-links">
+        {% if pub.paper_url and pub.paper_url != "" %}<a href="{{ pub.paper_url }}" class="pub-link" target="_blank" rel="noopener">Paper</a>{% endif %}
+        {% if pub.pdf_url and pub.pdf_url != "" %}<a href="{{ pub.pdf_url }}" class="pub-link" target="_blank" rel="noopener">PDF</a>{% endif %}
+        {% if pub.code_url and pub.code_url != "" %}<a href="{{ pub.code_url }}" class="pub-link" target="_blank" rel="noopener">Code</a>{% endif %}
+        {% if pub.project_url and pub.project_url != "" %}<a href="{{ pub.project_url }}" class="pub-link" target="_blank" rel="noopener">Project</a>{% endif %}
+        {% if pub.poster_url and pub.poster_url != "" %}<a href="{{ pub.poster_url }}" class="pub-link" target="_blank" rel="noopener">Poster</a>{% endif %}
+        {% if pub.slides_url and pub.slides_url != "" %}<a href="{{ pub.slides_url }}" class="pub-link" target="_blank" rel="noopener">Slides</a>{% endif %}
+      </div>
+      {% endif %}
+    </div>
+  </li>
+  {% endfor %}
+</ul>
+{% else %}
+<p class="no-publications">No publications yet. Add entries to <code>_data/publications.yml</code> to list them here.</p>
+{% endif %}
